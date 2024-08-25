@@ -3,261 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enhanced School Management System</title>
-    <style>
-        /* CSS styles */
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
-        }
-        header {
-            background: #35424a;
-            color: #ffffff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #e8491d 3px solid;
-        }
-        header h1 {
-            margin: 0;
-            text-align: center;
-        }
-        .section {
-            background: #ffffff;
-            margin: 20px 0;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-        }
-        .form-group input {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        .btn {
-            display: inline-block;
-            background: #e8491d;
-            color: #ffffff;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-        }
-        .btn:hover {
-            background: #ff6a3c;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        th {
-            background-color: #35424a;
-            color: white;
-        }
-    </style>
+    <title>Comprehensive School Management System</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Enhanced School Management System</h1>
+        <h1>Comprehensive School Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="#teachers">Teachers</a></li>
+                <li><a href="#students">Students</a></li>
+                <li><a href="#users">Users</a></li>
+                <li><a href="#examinations">Examinations</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="container">
-        <section class="section" id="teacher-registration">
-            <h2>Teacher Registration</h2>
+    <main>
+        <section id="teachers">
+            <h2>Teacher Management</h2>
             <form id="teacher-form">
-                <div class="form-group">
-                    <label for="teacher-name">Name:</label>
-                    <input type="text" id="teacher-name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="teacher-email">Email:</label>
-                    <input type="email" id="teacher-email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="teacher-subject">Subject:</label>
-                    <input type="text" id="teacher-subject" name="subject" required>
-                </div>
-                <button type="submit" class="btn">Register Teacher</button>
+                <h3>Teacher Registration</h3>
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="phone" placeholder="Phone Number">
+                <input type="text" name="subject" placeholder="Subject">
+                <button type="submit">Register Teacher</button>
             </form>
-            <div id="teacher-datagrid">
-                <h3>Registered Teachers</h3>
-                <table id="teacher-table">
+            <div class="datagrid">
+                <h3>Teachers List</h3>
+                <table id="teachers-table">
                     <thead>
                         <tr>
                             <th>Name</th>
                             <th>Email</th>
+                            <th>Phone</th>
                             <th>Subject</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
-                    <tbody id="teacher-table-body"></tbody>
+                    <tbody>
+                        <!-- Teacher data will be dynamically populated here -->
+                    </tbody>
                 </table>
             </div>
         </section>
 
-        <section class="section" id="student-registration">
-            <h2>Student Registration</h2>
+        <section id="students">
+            <h2>Student Management</h2>
             <form id="student-form">
-                <div class="form-group">
-                    <label for="student-name">Name:</label>
-                    <input type="text" id="student-name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="student-email">Email:</label>
-                    <input type="email" id="student-email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="student-grade">Grade:</label>
-                    <input type="text" id="student-grade" name="grade" required>
-                </div>
-                <button type="submit" class="btn">Register Student</button>
+                <h3>Student Registration</h3>
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="phone" placeholder="Phone Number">
+                <input type="text" name="grade" placeholder="Grade/Class">
+                <button type="submit">Register Student</button>
             </form>
-            <div id="student-datagrid">
-                <h3>Registered Students</h3>
-                <table id="student-table">
+            <div class="datagrid">
+                <h3>Students List</h3>
+                <table id="students-table">
                     <thead>
                         <tr>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Grade</th>
+                            <th>Phone</th>
+                            <th>Grade/Class</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
-                    <tbody id="student-table-body"></tbody>
+                    <tbody>
+                        <!-- Student data will be dynamically populated here -->
+                    </tbody>
                 </table>
             </div>
         </section>
 
-        <section class="section" id="user-registration">
-            <h2>User Registration</h2>
+        <section id="users">
+            <h2>User Management</h2>
             <form id="user-form">
-                <div class="form-group">
-                    <label for="user-name">Username:</label>
-                    <input type="text" id="user-name" name="username" required>
-                </div>
-                <div class="form-group">
-                    <label for="user-email">Email:</label>
-                    <input type="email" id="user-email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="user-role">Role:</label>
-                    <input type="text" id="user-role" name="role" required>
-                </div>
-                <button type="submit" class="btn">Register User</button>
+                <h3>User Registration</h3>
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <select name="role" required>
+                    <option value="">Select Role</option>
+                    <option value="admin">Admin</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="student">Student</option>
+                </select>
+                <button type="submit">Register User</button>
             </form>
-            <div id="user-datagrid">
-                <h3>Registered Users</h3>
-                <table id="user-table">
+            <div class="datagrid">
+                <h3>Users List</h3>
+                <table id="users-table">
                     <thead>
                         <tr>
                             <th>Username</th>
                             <th>Email</th>
                             <th>Role</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
-                    <tbody id="user-table-body"></tbody>
+                    <tbody>
+                        <!-- User data will be dynamically populated here -->
+                    </tbody>
                 </table>
             </div>
         </section>
 
-        <section class="section" id="examinations">
+        <section id="examinations">
             <h2>Examinations</h2>
             <form id="exam-form">
-                <div class="form-group">
-                    <label for="exam-name">Exam Name:</label>
-                    <input type="text" id="exam-name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="exam-date">Date:</label>
-                    <input type="date" id="exam-date" name="date" required>
-                </div>
-                <div class="form-group">
-                    <label for="exam-subject">Subject:</label>
-                    <input type="text" id="exam-subject" name="subject" required>
-                </div>
-                <button type="submit" class="btn">Schedule Exam</button>
+                <h3>Schedule Examination</h3>
+                <input type="text" name="name" placeholder="Exam Name" required>
+                <input type="date" name="date" required>
+                <input type="time" name="time" required>
+                <input type="text" name="subject" placeholder="Subject">
+                <input type="text" name="grade" placeholder="Grade/Class">
+                <button type="submit">Schedule Exam</button>
             </form>
-            <div id="exam-datagrid">
-                <h3>Scheduled Exams</h3>
-                <table id="exam-table">
+            <div class="datagrid">
+                <h3>Examination Schedule</h3>
+                <table id="exams-table">
                     <thead>
                         <tr>
                             <th>Exam Name</th>
                             <th>Date</th>
+                            <th>Time</th>
                             <th>Subject</th>
+                            <th>Grade/Class</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
-                    <tbody id="exam-table-body"></tbody>
+                    <tbody>
+                        <!-- Exam data will be dynamically populated here -->
+                    </tbody>
                 </table>
             </div>
         </section>
-    </div>
+    </main>
 
-    <script>
-        // JavaScript to handle form submissions and populate tables
-        document.getElementById('teacher-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('teacher-name').value;
-            const email = document.getElementById('teacher-email').value;
-            const subject = document.getElementById('teacher-subject').value;
-            addToTable('teacher-table-body', [name, email, subject]);
-            this.reset();
-        });
+    <footer>
+        <p>&copy; 2024 Comprehensive School Management System. All rights reserved.</p>
+    </footer>
 
-        document.getElementById('student-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('student-name').value;
-            const email = document.getElementById('student-email').value;
-            const grade = document.getElementById('student-grade').value;
-            addToTable('student-table-body', [name, email, grade]);
-            this.reset();
-        });
-
-        document.getElementById('user-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const username = document.getElementById('user-name').value;
-            const email = document.getElementById('user-email').value;
-            const role = document.getElementById('user-role').value;
-            addToTable('user-table-body', [username, email, role]);
-            this.reset();
-        });
-
-        document.getElementById('exam-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('exam-name').value;
-            const date = document.getElementById('exam-date').value;
-            const subject = document.getElementById('exam-subject').value;
-            addToTable('exam-table-body', [name, date, subject]);
-            this.reset();
-        });
-
-        function addToTable(tableId, rowData) {
-            const tbody = document.getElementById(tableId);
-            const row = tbody.insertRow();
-            rowData.forEach(text => {
-                const cell = row.insertCell();
-                cell.textContent = text;
-            });
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
