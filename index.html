@@ -3,149 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comprehensive School Management System</title>
+    <title>School Management System</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <h1>Comprehensive School Management System</h1>
-        <nav>
-            <ul>
-                <li><a href="#teachers">Teachers</a></li>
-                <li><a href="#students">Students</a></li>
-                <li><a href="#users">Users</a></li>
-                <li><a href="#examinations">Examinations</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav>
+        <div class="logo">
+            <h1>SchoolMS</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" class="active" data-page="dashboard">Dashboard</a></li>
+            <li><a href="#" data-page="teachers">Teachers</a></li>
+            <li><a href="#" data-page="students">Students</a></li>
+            <li><a href="#" data-page="users">Users</a></li>
+            <li><a href="#" data-page="examinations">Examinations</a></li>
+        </ul>
+    </nav>
 
-    <main>
-        <section id="teachers">
-            <h2>Teacher Management</h2>
-            <form id="teacher-form">
-                <h3>Teacher Registration</h3>
-                <input type="text" name="name" placeholder="Full Name" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="tel" name="phone" placeholder="Phone Number">
-                <input type="text" name="subject" placeholder="Subject">
-                <button type="submit">Register Teacher</button>
-            </form>
-            <div class="datagrid">
-                <h3>Teachers List</h3>
-                <table id="teachers-table">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Phone</th>
-                            <th>Subject</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Teacher data will be dynamically populated here -->
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <section id="students">
-            <h2>Student Management</h2>
-            <form id="student-form">
-                <h3>Student Registration</h3>
-                <input type="text" name="name" placeholder="Full Name" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="tel" name="phone" placeholder="Phone Number">
-                <input type="text" name="grade" placeholder="Grade/Class">
-                <button type="submit">Register Student</button>
-            </form>
-            <div class="datagrid">
-                <h3>Students List</h3>
-                <table id="students-table">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Phone</th>
-                            <th>Grade/Class</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Student data will be dynamically populated here -->
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <section id="users">
-            <h2>User Management</h2>
-            <form id="user-form">
-                <h3>User Registration</h3>
-                <input type="text" name="username" placeholder="Username" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="password" name="password" placeholder="Password" required>
-                <select name="role" required>
-                    <option value="">Select Role</option>
-                    <option value="admin">Admin</option>
-                    <option value="teacher">Teacher</option>
-                    <option value="student">Student</option>
-                </select>
-                <button type="submit">Register User</button>
-            </form>
-            <div class="datagrid">
-                <h3>Users List</h3>
-                <table id="users-table">
-                    <thead>
-                        <tr>
-                            <th>Username</th>
-                            <th>Email</th>
-                            <th>Role</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- User data will be dynamically populated here -->
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <section id="examinations">
-            <h2>Examinations</h2>
-            <form id="exam-form">
-                <h3>Schedule Examination</h3>
-                <input type="text" name="name" placeholder="Exam Name" required>
-                <input type="date" name="date" required>
-                <input type="time" name="time" required>
-                <input type="text" name="subject" placeholder="Subject">
-                <input type="text" name="grade" placeholder="Grade/Class">
-                <button type="submit">Schedule Exam</button>
-            </form>
-            <div class="datagrid">
-                <h3>Examination Schedule</h3>
-                <table id="exams-table">
-                    <thead>
-                        <tr>
-                            <th>Exam Name</th>
-                            <th>Date</th>
-                            <th>Time</th>
-                            <th>Subject</th>
-                            <th>Grade/Class</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Exam data will be dynamically populated here -->
-                    </tbody>
-                </table>
-            </div>
-        </section>
+    <main id="main-content">
+        <!-- Content will be dynamically loaded here -->
     </main>
-
-    <footer>
-        <p>&copy; 2024 Comprehensive School Management System. All rights reserved.</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
